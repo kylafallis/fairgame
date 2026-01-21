@@ -2,199 +2,91 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FairGame | Science Fairs Without Barriers</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <header>
         <nav class="container">
-            <div class="logo">
-                <strong>logo-icon.png</strong>
-                <span>FairGame</span>
-            </div>
+            <a href="index.html" class="logo"><strong>logo-icon.png</strong><span>FairGame</span></a>
             <ul class="nav-links">
-                <li><a href="#" class="active">Home</a></li>
-                <li class="dropdown">Resources ▾</li>
-                <li class="dropdown">Get Involved ▾</li>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a>Resources ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="setupguide.html">Setup Guide</a>
+                        <a href="stateresources.html">State Resources</a>
+                        <a href="researchguide.html">Research Guide</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a>Get Involved ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="volunteer.html">Volunteer</a>
+                        <a href="donate.html">Donate</a>
+                    </div>
+                </li>
+                <li><a href="setupguide.html" class="btn btn-nav">Get Started</a></li>
             </ul>
-            <a href="#" class="btn btn-nav">Get Started</a>
         </nav>
     </header>
 
-    <main>
+    <main class="container">
         <section class="hero">
-            <div class="container hero-grid">
-                <div class="hero-content">
-                    <span class="badge">Empowering Future Scientists</span>
-                    <h1>Science Fairs<br>Without Barriers</h1>
-                    <p>Every student deserves the opportunity to explore science. We provide free resources, guidance, and connections to bring world-class science fair experiences to underserved communities.</p>
-                    <div class="hero-btns">
-                        <a href="#" class="btn btn-primary">Start a Science Fair &rarr;</a>
-                        <a href="#" class="btn btn-secondary">Begin Your Research</a>
-                    </div>
-                </div>
-                <div class="hero-visual">
-                    <div class="pattern-overlay">
-                        <strong>hero-pattern-bg.png</strong>
-                    </div>
-                </div>
+            <span class="badge">Empowering Future Scientists</span>
+            <h1>Science Fairs<br>Without Barriers</h1>
+            <p>Every student deserves the opportunity to explore science. We provide free resources, guidance, and connections to underserved communities.</p>
+            <div class="hero-btns">
+                <a href="setupguide.html" class="btn btn-primary">Start a Science Fair &rarr;</a>
+                <a href="researchguide.html" class="btn btn-secondary" style="margin-left:16px;">Begin Your Research</a>
             </div>
         </section>
 
-        <section class="stats">
-            <div class="container stats-grid">
-                <div class="stat-item"><h2>0</h2><p>States Covered</p></div>
-                <div class="stat-item"><h2>0</h2><p>Schools Supported</p></div>
-                <div class="stat-item"><h2>0</h2><p>Students Reached</p></div>
-                <div class="stat-item"><h2>100%</h2><p>Free Resources</p></div>
-            </div>
-        </section>
-
-        <section class="gap-section">
-            <div class="container grid-2-col">
-                <div class="gap-text">
-                    <h2 class="section-title">Bridging the<br>Opportunity Gap</h2>
-                    <p>Many schools lack the resources, knowledge, or connections to participate in science fairs. Students in underserved areas miss out on transformative experiences that could shape their futures.</p>
-                    <p>FairGame provides everything needed to launch and sustain science fair programs—from initial planning guides to competition preparation, all completely free.</p>
-                    <div class="gap-icons">
-                        <span>💡 Inspire Discovery</span>
-                        <span>🎀 Celebrate Achievement</span>
-                    </div>
-                </div>
-                <div class="bento-grid">
-                    <div class="bento-card green">Research Skills</div>
-                    <div class="bento-card pink">Critical Thinking</div>
-                    <div class="bento-card light-blue">Presentation</div>
-                    <div class="bento-card grey">Innovation</div>
-                </div>
-            </div>
-        </section>
-<section class="download-section">
-    <div class="container">
-        <h2 class="section-title-large text-center">Downloadable Resources</h2>
-        <p class="section-subtitle text-center">Free templates, guides, and tools to help you organize your science fair</p>
-        
-        <div class="resource-grid">
-            <div class="resource-card-alt">
-                <span class="tag">Template</span>
-                <h4>Project Registration Form Template</h4>
-                <p>Customizable form for student project registration</p>
-                <a href="downloads/project-registration-form.pdf" download class="download-btn">Download ⬇</a>
-            </div>
-
-            <div class="resource-card-alt">
-                <span class="tag">Guide</span>
-                <h4>Judging Rubric & Scoresheet</h4>
-                <p>Standardized criteria for fair evaluation</p>
-                <a href="downloads/judging-rubric.pdf" download class="download-btn">Download ⬇</a>
-            </div>
-
-            <div class="resource-card-alt">
-                <span class="tag">Printable</span>
-                <h4>Scientific Method Poster</h4>
-                <p>Visual guide for students on the research process</p>
-                <a href="downloads/scientific-method-poster.pdf" download class="download-btn">Download ⬇</a>
-            </div>
-
-            <div class="resource-card-alt">
-                <span class="tag">Template</span>
-                <h4>Sponsor Outreach Letter</h4>
-                <p>Sample letter for requesting prize donations</p>
-                <a href="downloads/sponsor-outreach-letter.pdf" download class="download-btn">Download ⬇</a>
-            </div>
-
-            <div class="resource-card-alt">
-                <span class="tag">Guide</span>
-                <h4>Display Board Guidelines</h4>
-                <p>Rules and tips for creating effective presentations</p>
-                <a href="downloads/display-board-guidelines.pdf" download class="download-btn">Download ⬇</a>
-            </div>
-
-            <div class="resource-card-alt">
-                <span class="tag">Tool</span>
-                <h4>Timeline Planning Spreadsheet</h4>
-                <p>Customizable planning calendar template</p>
-                <a href="downloads/planning-spreadsheet.pdf" download class="download-btn">Download ⬇</a>
-            </div>
-        </div>
-    </div>
-</section>
-        <section class="how-it-works">
-            <div class="container text-center">
-                <h2 class="section-title-large">How It Works</h2>
-                <p class="section-subtitle">Three simple steps to get started</p>
-                
-                <div class="steps-grid">
-                    <div class="step-card">
-                        <span class="step-num">01</span>
-                        <h3>Explore Resources</h3>
-                        <p>Browse our comprehensive guides tailored to your needs—whether you're a student, teacher, or administrator.</p>
-                    </div>
-                    <div class="step-card">
-                        <span class="step-num">02</span>
-                        <h3>Connect & Learn</h3>
-                        <p>Join our community, find mentors, and access workshops designed to build your research skills.</p>
-                    </div>
-                    <div class="step-card">
-                        <span class="step-num">03</span>
-                        <h3>Launch Your Project</h3>
-                        <p>Use our templates, timelines, and expert advice to start your science fair journey with confidence.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="final-cta">
-            <div class="container text-center">
-                <h2>Ready to Make a Difference?</h2>
-                <p>Whether you're a student ready to start your first project, a teacher<br>looking to inspire your classroom, or a school administrator<br>wanting to launch a program—we're here to help.</p>
-                <div class="cta-btns">
-                    <a href="#" class="btn btn-light">Explore Resources</a>
-                    <a href="#" class="btn btn-outline">Contact Us</a>
-                </div>
-            </div>
+        <section class="bento-grid">
+            <a href="setupguide.html" class="bento-card">
+                <div class="icon-holder"><strong>icon-book.png</strong></div>
+                <h3>Complete Setup Guides</h3>
+                <p>Step-by-step instructions for organizing fairs at any school, from planning to execution.</p>
+            </a>
+            <a href="stateresources.html" class="bento-card">
+                <div class="icon-holder"><strong>icon-map.png</strong></div>
+                <h3>State-by-State Resources</h3>
+                <p>Comprehensive database of opportunities, requirements, and contacts for all 50 states.</p>
+            </a>
+            <a href="researchguide.html" class="bento-card">
+                <div class="icon-holder"><strong>icon-flask.png</strong></div>
+                <h3>Research Project Help</h3>
+                <p>Learn how to develop winning research projects, from ideation to presentation.</p>
+            </a>
         </section>
     </main>
 
     <footer>
         <div class="container footer-grid">
-            <div class="footer-brand">
-                <div class="logo">
-                    <strong>logo-icon-white.png</strong>
-                    <span>FairGame</span>
-                </div>
-                <p>Empowering every student to explore, discover, and innovate through accessible science fair resources. No matter where you are, science should be within reach.</p>
-                <div class="social-icons">
-                    <strong>social-twitter.png</strong>
-                    <strong>social-linkedin.png</strong>
-                    <strong>social-github.png</strong>
-                    <strong>social-email.png</strong>
-                </div>
+            <div>
+                <a class="logo" style="color:white"><strong>logo-icon-white.png</strong><span>FairGame</span></a>
+                <p style="margin-top:20px; opacity:0.7;">Empowering every student to explore and innovate. Science should be within reach for all.</p>
+                <div style="margin-top:20px;"><strong>social-icons.png</strong></div>
             </div>
             <div class="footer-links">
                 <h4>Resources</h4>
                 <ul>
-                    <li>Setup Guide</li>
-                    <li>State Resources</li>
-                    <li>Research Guide</li>
-                    <li>Society for Science</li>
+                    <li><a href="setupguide.html">Setup Guide</a></li>
+                    <li><a href="stateresources.html">State Resources</a></li>
+                    <li><a href="researchguide.html">Research Guide</a></li>
                 </ul>
             </div>
             <div class="footer-links">
                 <h4>Get Involved</h4>
                 <ul>
-                    <li>Volunteer</li>
-                    <li>Partner With Us</li>
-                    <li>Donate</li>
-                    <li>Contact</li>
+                    <li><a href="volunteer.html">Volunteer</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                    <li><a href="volunteer.html">Partner With Us</a></li>
                 </ul>
             </div>
         </div>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>

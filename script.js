@@ -1,74 +1,67 @@
-// Functionality to simulate dropdowns or interactions if needed
 document.addEventListener('DOMContentLoaded', () => {
-    console.log("FairGame Landing Page Loaded");
-
-    // Example: Smooth scroll to sections
-    const navItems = document.querySelectorAll('.nav-links li');
-    navItems.forEach(item => {
-        item.addEventListener('mouseover', () => {
-            item.style.cursor = 'pointer';
-        });
-    });
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-    
-    // 1. Tab Switching Logic
-    const tabs = document.querySelectorAll('.tab-btn');
-    const contents = document.querySelectorAll('.phase-content');
-    const timeText = document.getElementById('timeframe-text');
-
-    const timeframes = {
-        planning: "6-8 months before",
-        preparation: "3-5 months before",
-        execution: "1-2 weeks before"
-    };
-
-    tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            const target = tab.getAttribute('data-target');
-
-            // Update Buttons
-            tabs.forEach(t => t.classList.remove('active'));
-            tab.classList.add('active');
-
-            // Update Content
-            contents.forEach(c => c.classList.remove('active'));
-            document.getElementById(target).classList.add('active');
-
-            // Update Timeframe Text
-            timeText.innerText = timeframes[target];
+    // 1. Dropdown Interactivity
+    const dropdowns = document.querySelectorAll('.dropdown');
+    dropdowns.forEach(drop => {
+        drop.addEventListener('click', (e) => {
+            const menu = drop.querySelector('.dropdown-menu');
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
         });
     });
 
-    // 2. Accordion Logic
-    const accordionHeaders = document.querySelectorAll('.accordion-header');
-    
-    accordionHeaders.forEach(header => {
+    // 2. State Resources Filter (Midwest Initial)
+    const stateInput = document.getElementById('state-search');
+    const stateGrid = document.getElementById('state-grid');
+
+    const midwestStates = [
+        { name: 'Illinois', link: '#', fair: 'IJAS State Exposition' },
+        { name: 'Indiana', link: '#', fair: 'Hoosier Science & Engineering Fair' },
+        { name: 'Michigan', link: '#', fair: 'Science & Engineering Fair of Metro Detroit' },
+        { name: 'Ohio', link: '#', fair: 'The Ohio Academy of Science' },
+        { name: 'Wisconsin', link: '#', fair: 'Capital Science & Engineering Fair' }
+    ];
+
+    if (stateInput && stateGrid) {
+        stateInput.addEventListener('input', (e) => {
+            const term = e.target.value.toLowerCase();
+            const filtered = midwestStates.filter(s => s.name.toLowerCase().includes(term));
+            
+            stateGrid.innerHTML = filtered.map(s => `
+                <div class="bento-card">
+                    <h3>${s.name}</h3>
+                    <p>${s.fair}</p>
+                    <a href="${s.link}" class="btn-secondary" style="margin-top:20px; display:inline-block; padding:8px 16px;">View Local Rules</a>
+                </div>
+            `).join('');
+        });
+    }
+
+    // 3. Mock Database Integration (Formspree Style)
+    const activeForms = document.querySelectorAll('form');
+    activeForms.forEach(form => {
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(form);
+            const button = form.querySelector('button');
+            
+            button.innerText = "Sending...";
+            button.disabled = true;
+
+            // Simulate Network Delay
+            setTimeout(() => {
+                alert("Submission successful! Your data has been securely sent to the FairGame database.");
+                button.innerText = "Submit";
+                button.disabled = false;
+                form.reset();
+            }, 1500);
+        });
+    });
+
+    // 4. Accordion Toggle for Guides
+    const accordions = document.querySelectorAll('.accordion-header');
+    accordions.forEach(header => {
         header.addEventListener('click', () => {
             const item = header.parentElement;
-            
-            // Toggle current item
-            item.classList.toggle('open');
-            
-            // Close others when one opens
-            document.querySelectorAll('.accordion-item').forEach(other => {
-            if (other !== item) other.classList.remove('open');
-            });
+            item.classList.toggle('active');
         });
-    });
-});
-
-// Dropdown Interaction
-const dropdowns = document.querySelectorAll('.dropdown');
-
-dropdowns.forEach(dropdown => {
-    dropdown.addEventListener('mouseenter', () => {
-        // In a real implementation, you would show a hidden <ul> here
-        dropdown.style.color = 'var(--dark-pink)';
-    });
-    
-    dropdown.addEventListener('mouseleave', () => {
-        dropdown.style.color = 'inherit';
     });
 });

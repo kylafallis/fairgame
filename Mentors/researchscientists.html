@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Research Scientists | FairGame</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo"><strong>logo-icon.png</strong><span>FairGame</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a>Resources ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="setupguide.html">Setup Guide</a>
+                        <a href="stateresources.html">State Resources</a>
+                        <a href="researchguide.html">Research Guide</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a>Get Involved ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="volunteer.html">Volunteer</a>
+                        <a href="donate.html">Donate</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero-small" style="padding: 60px 0;">
+            <span class="badge">Academic Outreach</span>
+            <h1>University Lab Connections</h1>
+            <p>Access professional lab environments and gain guidance from active researchers in your field of interest.</p>
+        </section>
+
+        <div class="bento-grid">
+            <div class="bento-card">
+                <div class="icon-holder"><strong>icon-microscope.png</strong></div>
+                <h3>University Outreach Programs</h3>
+                <p>Browse a list of universities with dedicated high school research summer programs and year-round lab access.</p>
+                <ul class="checklist" style="list-style: none; margin: 20px 0; opacity: 0.8;">
+                    <li>• MIT High School Studies Program</li>
+                    <li>• Stanford Science Outreach</li>
+                    <li>• Ohio State Science Day Mentorship</li>
+                </ul>
+            </div>
+
+            <div class="bento-card" style="grid-column: span 2; background: var(--brand-green); color: white;">
+                <h3>Request a Lab Mentor</h3>
+                <p style="color: rgba(255,255,255,0.8);">Our team helps match qualified students with local professors. Tell us about your research hypothesis.</p>
+                <form id="mentor-request-form" style="margin-top: 20px;">
+                    <input type="text" placeholder="Your Proposed Research Topic" style="margin-bottom: 10px;">
+                    <button type="submit" class="btn btn-secondary">Request Mentor Match</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

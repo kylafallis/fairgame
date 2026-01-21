@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Past Winners | FairGame</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <section class="hero-small" style="padding: 60px 0;">
+            <span class="badge">Hall of Fame</span>
+            <h1>Project Gallery</h1>
+            <p>Explore award-winning projects from previous years to find inspiration for your own research journey.</p>
+        </section>
+
+        <div class="bento-grid">
+            <div class="bento-card">
+                <div style="background: #ddd; height: 150px; border-radius: 6px; margin-bottom: 15px; display: flex; align-items: center; justify-content: center;">
+                    <strong>winner-project-1.jpg</strong>
+                </div>
+                <h4>Low-Cost Water Filtration</h4>
+                <p style="font-size: 0.85rem;">ISEF 1st Place - Environmental Engineering</p>
+                <a href="#" style="color: var(--dark-pink); font-weight: 600; font-size: 0.8rem; text-decoration: none;">View Abstract →</a>
+            </div>
+
+            <div class="bento-card" style="grid-column: span 2; border: 2px solid var(--brand-pink);">
+                <h3>Join the Alumni Network</h3>
+                <p>Are you a past science fair winner? Join our network to mentor the next generation of students.</p>
+                <form id="alumni-form" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px;">
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Email">
+                    <input type="text" placeholder="Year Won" style="grid-column: span 2;">
+                    <button type="submit" class="btn btn-primary" style="grid-column: span 2;">Join Network</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

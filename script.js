@@ -11,8 +11,33 @@ document.addEventListener('DOMContentLoaded', function() {
     initCounterAnimations();
     initQuiz();
     initSmoothScroll();
+    initSkillCards();
     
 });
+
+// ==========================================================================
+// Skill Cards - Collapsible Interaction
+// ==========================================================================
+
+function initSkillCards() {
+    const skillCards = document.querySelectorAll('.skill-card');
+    
+    skillCards.forEach(card => {
+        const header = card.querySelector('.skill-card-header');
+        
+        header.addEventListener('click', function() {
+            // Close all other cards
+            skillCards.forEach(otherCard => {
+                if (otherCard !== card) {
+                    otherCard.classList.remove('active');
+                }
+            });
+            
+            // Toggle current card
+            card.classList.toggle('active');
+        });
+    });
+}
 
 // ==========================================================================
 // Mobile Navigation

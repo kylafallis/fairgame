@@ -3,344 +3,409 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FairGame Initiative - Science Fairs Without Barriers</title>
+    <title>FairGame - Science Fairs Without Barriers</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="container">
-            <div class="nav-content">
-                <a href="index.html" class="logo">
-                    <img src="Images/logo.svg" alt="FairGame Initiative Logo" class="logo-img">
-                    <span class="logo-text">FairGame</span>
-                </a>
-                <button class="mobile-toggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#resources">Resources</a></li>
-                    <li><a href="#get-started">Get Started</a></li>
-                    <li><a href="donate.html" class="btn-nav-donate">Donate</a></li>
-                </ul>
-            </div>
+        <div class="container-nav">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">F</div>
+                <span class="logo-text">FairGame</span>
+            </a>
+            <button class="mobile-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Resources <span class="arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="setupguide.html">Setup Guide</a></li>
+                        <li><a href="stateresources.html">State Resources</a></li>
+                        <li><a href="researchguide.html">Research Guide</a></li>
+                        <li><a href="starthere.html">Start Here</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Get Involved <span class="arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="volunteer.html">Volunteer</a></li>
+                        <li><a href="donate.html">Donate</a></li>
+                    </ul>
+                </li>
+                <li><a href="starthere.html" class="btn-nav-cta">Get Started</a></li>
+            </ul>
         </div>
     </nav>
 
-    <!-- Full-Screen Hero Section with Large Image -->
+    <!-- Full-Screen Hero -->
     <section class="hero-fullscreen">
         <div class="hero-image-container">
-            <img src="Images/science-fair-hero.jpg" alt="Students at science fair" class="hero-image">
+            <img src="science-fair-hero.jpg" alt="Students at science fair" class="hero-image">
             <div class="hero-overlay"></div>
         </div>
         <div class="hero-content-center">
-            <h1 class="hero-title-large">FairGame Initiative</h1>
-            <p class="hero-subtitle-large">Science Fairs Without Barriers</p>
+            <h1 class="hero-title-massive">
+                <span class="hero-title-line">Science</span>
+                <span class="hero-title-line">FairsWithout</span>
+                <span class="hero-title-line highlight">Barriers</span>
+            </h1>
+            <p class="hero-subtitle-clean">Empowering every student to explore, discover, and innovate</p>
             <div class="hero-buttons">
-                <a href="#quiz" class="btn btn-primary btn-large">Get Started</a>
-                <a href="#about" class="btn btn-secondary btn-large">Learn More</a>
+                <a href="starthere.html" class="btn btn-primary-hero btn-large">Get Started</a>
+                <a href="#about" class="btn btn-secondary-hero btn-large">Learn More</a>
+            </div>
+        </div>
+        <div class="scroll-hint">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Stats Banner -->
+    <section class="stats-banner">
+        <div class="stats-track">
+            <div class="stat-item">
+                <span class="stat-number" data-target="50">0</span>
+                <span class="stat-label">States Covered</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="250">0</span>
+                <span class="stat-label">Schools Supported</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="15000">0</span>
+                <span class="stat-label">Students Reached</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-number percent" data-target="100">0</span>
+                <span class="stat-label">Free Resources</span>
             </div>
         </div>
     </section>
 
-    <!-- Thin Quiz Banner -->
-    <section class="quiz-banner">
+    <!-- Quick Quiz Banner -->
+    <section class="quiz-banner-slim">
         <div class="container">
-            <div class="quiz-banner-content">
+            <div class="quiz-banner-flex">
                 <div class="quiz-banner-text">
-                    <h3>Find Your Perfect Resources</h3>
-                    <p>Take our quick quiz to discover personalized guidance for students, educators, or parents</p>
+                    <h3>NotSure Where to Start?</h3>
+                    <p>Take our 30-second quiz to find personalized resources</p>
                 </div>
-                <a href="#quiz-section" class="btn btn-primary">Take the Quiz</a>
+                <a href="#quiz-section" class="btn btn-quiz">Take the Quiz →</a>
             </div>
         </div>
     </section>
 
-    <!-- Thin Impact Statistics Banner -->
-    <section class="impact-stats-thin">
-        <div class="container-wide">
-            <div class="stats-strip">
-                <div class="stat-item">
-                    <div class="stat-number" data-target="250">0</div>
-                    <div class="stat-label">Schools Supported</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-target="15000">0</div>
-                    <div class="stat-label">Students Reached</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-target="3500">0</div>
-                    <div class="stat-label">Projects Completed</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-target="500">0</div>
-                    <div class="stat-label">Active Mentors</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Asymmetric About Section -->
-    <section id="about" class="about-section-asymmetric">
+    <!-- Bridging the Gap Section -->
+    <section id="about" class="bridging-gap-section">
         <div class="container">
-            <div class="about-layout">
-                <div class="about-sidebar">
-                    <h2 class="about-title">Breaking Down Barriers to Science Education</h2>
-                    <p class="about-description">
-                        We're on a mission to ensure every student, regardless of their background or location, 
-                        has access to quality science fair resources and opportunities.
+            <div class="bridging-layout">
+                <div class="bridging-sidebar">
+                    <h2 class="section-title-big">Bridgingthe OpportunityGap</h2>
+                    <p class="section-description">
+                        Many schools lack the resources, knowledge, or connections to participate in science fairs. 
+                        Students in underserved areas miss out on transformative experiences that could shape their futures.
                     </p>
-                </div>
-                <div class="about-tabs">
-                    <div class="tab-item active" data-tab="access">
-                        <div class="tab-header">
-                            <div class="tab-number">01</div>
-                            <h3>Accessible to All</h3>
+                    <p class="section-description-sub">
+                        FairGame provides everything needed to launch and sustain science fair programs—from initial 
+                        planning guides to competition preparation, all completely free.
+                    </p>
+                    <div class="bridging-highlights">
+                        <div class="highlight-item">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M16.6 4L6 14.6L2 10.6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Inspire Discovery</span>
                         </div>
-                        <div class="tab-content">
-                            <p>
-                                Free, comprehensive resources designed for students in underserved communities 
-                                who may lack access to traditional science fair support systems. We believe every 
-                                student deserves the chance to explore, discover, and innovate.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="tab-item" data-tab="guidance">
-                        <div class="tab-header">
-                            <div class="tab-number">02</div>
-                            <h3>Expert Guidance</h3>
-                        </div>
-                        <div class="tab-content">
-                            <p>
-                                Connect with mentors, scientists, and educators who provide personalized 
-                                support throughout your science fair journey. From ideation to presentation, 
-                                you'll have experienced professionals by your side.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="tab-item" data-tab="community">
-                        <div class="tab-header">
-                            <div class="tab-number">03</div>
-                            <h3>Community Network</h3>
-                        </div>
-                        <div class="tab-content">
-                            <p>
-                                Join a nationwide network of students, teachers, and science enthusiasts 
-                                working together to make scientific discovery accessible and exciting. 
-                                Together, we're creating the next generation of innovators.
-                            </p>
+                        <div class="highlight-item">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M16.6 4L6 14.6L2 10.6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Celebrate Achievement</span>
                         </div>
                     </div>
                 </div>
+                <div class="bridging-cards">
+                    <div class="skill-card active" data-skill="research">
+                        <div class="skill-card-header">
+                            <div class="skill-icon research-icon"></div>
+                            <h3>Research Skills</h3>
+                            <button class="expand-btn">
+                                <span class="expand-icon">+</span>
+                            </button>
+                        </div>
+                        <div class="skill-card-content">
+                            <p>Students develop critical research methodologies, learn to formulate hypotheses, design experiments, and analyze data—skills that translate directly to college and career success.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card" data-skill="critical">
+                        <div class="skill-card-header">
+                            <div class="skill-icon critical-icon"></div>
+                            <h3>Critical Thinking</h3>
+                            <button class="expand-btn">
+                                <span class="expand-icon">+</span>
+                            </button>
+                        </div>
+                        <div class="skill-card-content">
+                            <p>Science fairs challenge students to question assumptions, evaluate evidence, and solve complex problems—building the analytical mindset needed in our rapidly evolving world.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card" data-skill="presentation">
+                        <div class="skill-card-header">
+                            <div class="skill-icon presentation-icon"></div>
+                            <h3>Presentation</h3>
+                            <button class="expand-btn">
+                                <span class="expand-icon">+</span>
+                            </button>
+                        </div>
+                        <div class="skill-card-content">
+                            <p>From creating visual displays to explaining complex concepts to judges, students gain confidence in public speaking and learn to communicate scientific ideas effectively.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card" data-skill="innovation">
+                        <div class="skill-card-header">
+                            <div class="skill-icon innovation-icon"></div>
+                            <h3>Innovation</h3>
+                            <button class="expand-btn">
+                                <span class="expand-icon">+</span>
+                            </button>
+                        </div>
+                        <div class="skill-card-content">
+                            <p>Science fairs encourage creative problem-solving and original thinking, empowering students to become innovators who can tackle the challenges of tomorrow.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Everything You Need -->
+    <section class="everything-section">
+        <div class="container">
+            <h2 class="section-title-center">Everything YouNeed</h2>
+            <p class="section-subtitle-center">Comprehensive resources designed to support students, teachers, and schools at every step</p>
+            
+            <div class="resources-grid-modern">
+                <a href="setupguide.html" class="resource-card-modern">
+                    <div class="resource-icon-modern setup-bg"></div>
+                    <h4>Complete Setup Guides</h4>
+                    <p>Step-by-step instructions for organizing science fairs at any school, from planning to execution.</p>
+                    <span class="resource-arrow">→</span>
+                </a>
+                
+                <a href="stateresources.html" class="resource-card-modern">
+                    <div class="resource-icon-modern state-bg"></div>
+                    <h4>State-by-State Resources</h4>
+                    <p>Comprehensive database of science fair opportunities, requirements, and contacts for all 50 states.</p>
+                    <span class="resource-arrow">→</span>
+                </a>
+                
+                <a href="researchguide.html" class="resource-card-modern">
+                    <div class="resource-icon-modern research-bg"></div>
+                    <h4>Research Project Help</h4>
+                    <p>Learn how to develop winning research projects, from ideation to presentation.</p>
+                    <span class="resource-arrow">→</span>
+                </a>
+                
+                <a href="onlinecommunities.html" class="resource-card-modern">
+                    <div class="resource-icon-modern mentor-bg"></div>
+                    <h4>Mentor Network</h4>
+                    <p>Connect with scientists, teachers, and past winners who can guide your journey.</p>
+                    <span class="resource-arrow">→</span>
+                </a>
+                
+                <a href="pastwinners.html" class="resource-card-modern">
+                    <div class="resource-icon-modern competition-bg"></div>
+                    <h4>Competition Pathways</h4>
+                    <p>Navigate the path from local fairs to Regeneron ISEF and other prestigious competitions.</p>
+                    <span class="resource-arrow">→</span>
+                </a>
+                
+                <a href="teachers-professionals.html" class="resource-card-modern">
+                    <div class="resource-icon-modern teacher-bg"></div>
+                    <h4>Teacher Resources</h4>
+                    <p>Curriculum materials, judging guides, and training for educators supporting young scientists.</p>
+                    <span class="resource-arrow">→</span>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Interactive Quiz Section -->
-    <section id="quiz-section" class="quiz-section">
-        <div class="container">
-            <div class="quiz-container">
-                <!-- Question 1: User Type -->
+    <section id="quiz-section" class="quiz-section-modern">
+        <div class="container-quiz">
+            <div class="quiz-container-modern">
+                <!-- Step 1 -->
                 <div class="quiz-step active" id="step-1">
-                    <h3 class="quiz-question">Who are you?</h3>
-                    <div class="quiz-options">
-                        <button class="quiz-option" data-next="step-2-student" data-user-type="student">
-                            <span class="option-text">I'm a Student</span>
+                    <h3 class="quiz-question-modern">Who are you?</h3>
+                    <p class="quiz-subtitle">Choose your role to get personalized recommendations</p>
+                    <div class="quiz-options-modern">
+                        <button class="quiz-option-modern" data-next="step-2-student">
+                            <span class="option-label">I'm a Student</span>
                             <span class="option-arrow">→</span>
                         </button>
-                        
-                        <button class="quiz-option" data-next="step-2-educator" data-user-type="educator">
-                            <span class="option-text">I'm an Educator</span>
+                        <button class="quiz-option-modern" data-next="step-2-educator">
+                            <span class="option-label">I'm an Educator</span>
                             <span class="option-arrow">→</span>
                         </button>
-                        
-                        <button class="quiz-option" data-next="step-2-parent" data-user-type="parent">
-                            <span class="option-text">I'm a Parent</span>
+                        <button class="quiz-option-modern" data-next="step-2-parent">
+                            <span class="option-label">I'm a Parent</span>
                             <span class="option-arrow">→</span>
                         </button>
                     </div>
                 </div>
 
-                <!-- Question 2a: Student Needs -->
+                <!-- Step 2a: Student -->
                 <div class="quiz-step" id="step-2-student">
                     <button class="quiz-back">← Back</button>
-                    <h3 class="quiz-question">What do you need help with?</h3>
-                    <div class="quiz-options">
-                        <button class="quiz-option" data-result="student-getting-started">
-                            <span class="option-text">Getting Started with My Project</span>
+                    <h3 class="quiz-question-modern">What do you need help with?</h3>
+                    <div class="quiz-options-modern">
+                        <button class="quiz-option-modern" data-result="student-getting-started">
+                            <span class="option-label">Getting Started with My Project</span>
                             <span class="option-arrow">→</span>
                         </button>
-                        <button class="quiz-option" data-result="student-resources">
-                            <span class="option-text">Finding Research Resources</span>
+                        <button class="quiz-option-modern" data-result="student-resources">
+                            <span class="option-label">Finding Research Resources</span>
                             <span class="option-arrow">→</span>
                         </button>
-                        <button class="quiz-option" data-result="student-mentor">
-                            <span class="option-text">Connecting with a Mentor</span>
+                        <button class="quiz-option-modern" data-result="student-mentor">
+                            <span class="option-label">Connecting with a Mentor</span>
                             <span class="option-arrow">→</span>
                         </button>
-                        <button class="quiz-option" data-result="student-competition">
-                            <span class="option-text">Competition Information</span>
+                        <button class="quiz-option-modern" data-result="student-competition">
+                            <span class="option-label">Competition Information</span>
                             <span class="option-arrow">→</span>
                         </button>
                     </div>
                 </div>
 
-                <!-- Question 2b: Educator Needs -->
+                <!-- Step 2b: Educator -->
                 <div class="quiz-step" id="step-2-educator">
                     <button class="quiz-back">← Back</button>
-                    <h3 class="quiz-question">What can we help you with?</h3>
-                    <div class="quiz-options">
-                        <button class="quiz-option" data-result="educator-setup">
-                            <span class="option-text">Organizing a Science Fair</span>
+                    <h3 class="quiz-question-modern">What can we help you with?</h3>
+                    <div class="quiz-options-modern">
+                        <button class="quiz-option-modern" data-result="educator-setup">
+                            <span class="option-label">Organizing a Science Fair</span>
                             <span class="option-arrow">→</span>
                         </button>
-                        <button class="quiz-option" data-result="educator-curriculum">
-                            <span class="option-text">Curriculum & Teaching Resources</span>
+                        <button class="quiz-option-modern" data-result="educator-curriculum">
+                            <span class="option-label">Curriculum & Teaching Resources</span>
                             <span class="option-arrow">→</span>
                         </button>
-                        <button class="quiz-option" data-result="educator-funding">
-                            <span class="option-text">Finding Funding & Grants</span>
+                        <button class="quiz-option-modern" data-result="educator-funding">
+                            <span class="option-label">Finding Funding & Grants</span>
                             <span class="option-arrow">→</span>
                         </button>
-                        <button class="quiz-option" data-result="educator-support">
-                            <span class="option-text">Expert Support & Training</span>
+                        <button class="quiz-option-modern" data-result="educator-support">
+                            <span class="option-label">Expert Support & Training</span>
                             <span class="option-arrow">→</span>
                         </button>
                     </div>
                 </div>
 
-                <!-- Question 2c: Parent Needs -->
+                <!-- Step 2c: Parent -->
                 <div class="quiz-step" id="step-2-parent">
                     <button class="quiz-back">← Back</button>
-                    <h3 class="quiz-question">How can we support you?</h3>
-                    <div class="quiz-options">
-                        <button class="quiz-option" data-result="parent-guide">
-                            <span class="option-text">Understanding Science Fairs</span>
+                    <h3 class="quiz-question-modern">How can we support you?</h3>
+                    <div class="quiz-options-modern">
+                        <button class="quiz-option-modern" data-result="parent-guide">
+                            <span class="option-label">Understanding Science Fairs</span>
                             <span class="option-arrow">→</span>
                         </button>
-                        <button class="quiz-option" data-result="parent-support">
-                            <span class="option-text">Supporting My Child's Project</span>
+                        <button class="quiz-option-modern" data-result="parent-support">
+                            <span class="option-label">Supporting My Child's Project</span>
                             <span class="option-arrow">→</span>
                         </button>
-                        <button class="quiz-option" data-result="parent-local">
-                            <span class="option-text">Finding Local Opportunities</span>
+                        <button class="quiz-option-modern" data-result="parent-local">
+                            <span class="option-label">Finding Local Opportunities</span>
                             <span class="option-arrow">→</span>
                         </button>
-                        <button class="quiz-option" data-result="parent-inspire">
-                            <span class="option-text">Inspiring Interest in Science</span>
+                        <button class="quiz-option-modern" data-result="parent-inspire">
+                            <span class="option-label">Inspiring Interest in Science</span>
                             <span class="option-arrow">→</span>
                         </button>
                     </div>
                 </div>
 
-                <!-- Results Display -->
+                <!-- Results -->
                 <div class="quiz-results" id="quiz-results" style="display: none;">
-                    <h3 class="results-title">Your Personalized Resources</h3>
-                    <div class="results-content" id="results-content"></div>
+                    <h3 class="results-title-modern">Your PersonalizedResources</h3>
+                    <div class="results-content-modern" id="results-content"></div>
                     <button class="btn btn-primary quiz-restart">Start Over</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Compact Resources Grid -->
-    <section id="resources" class="resources-section-compact">
-        <div class="container">
-            <h2 class="section-title-center">Comprehensive Resources</h2>
-            <div class="resources-grid-compact">
-                <a href="setupguide.html" class="resource-card-compact">
-                    <h4>Setup Guides</h4>
-                    <p>Organize science fairs</p>
-                </a>
-                <a href="stateresources.html" class="resource-card-compact">
-                    <h4>State Resources</h4>
-                    <p>Find local opportunities</p>
-                </a>
-                <a href="researchguide.html" class="resource-card-compact">
-                    <h4>Research Help</h4>
-                    <p>Develop your project</p>
-                </a>
-                <a href="onlinecommunities.html" class="resource-card-compact">
-                    <h4>Mentor Network</h4>
-                    <p>Connect with experts</p>
-                </a>
-                <a href="pastwinners.html" class="resource-card-compact">
-                    <h4>Competition Paths</h4>
-                    <p>Navigate to ISEF</p>
-                </a>
-                <a href="teachers-professionals.html" class="resource-card-compact">
-                    <h4>Teacher Resources</h4>
-                    <p>Curriculum materials</p>
-                </a>
-            </div>
-        </div>
-    </section>
-
     <!-- CTA Section -->
-    <section id="get-started" class="cta-section">
+    <section class="cta-section-modern">
         <div class="container">
-            <div class="cta-content">
-                <h2 class="cta-title">Ready to Make a Difference?</h2>
-                <p class="cta-description">
-                    Join the FairGame community and help make science accessible to every student.
-                </p>
-                <div class="cta-buttons">
-                    <a href="#quiz-section" class="btn btn-primary btn-large">Get Started</a>
-                    <a href="volunteer.html" class="btn btn-secondary btn-large">Contact Us</a>
+            <div class="cta-content-flex">
+                <div class="cta-text">
+                    <h2 class="cta-title-big">Ready to MakeaDifference?</h2>
+                    <p class="cta-description">Join the FairGame community and help make science accessible to every student.</p>
+                </div>
+                <div class="cta-buttons-stack">
+                    <a href="starthere.html" class="btn btn-primary-cta btn-large">Get Started</a>
+                    <a href="volunteer.html" class="btn btn-secondary-cta btn-large">Contact Us</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer-modern">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section footer-brand">
+            <div class="footer-top">
+                <div class="footer-brand">
                     <div class="footer-logo">
-                        <img src="Images/logo.svg" alt="FairGame Initiative">
+                        <div class="logo-icon">F</div>
                         <span>FairGame</span>
                     </div>
-                    <p class="footer-tagline">
-                        Empowering every student to explore, discover, and innovate through accessible 
-                        science fair resources. No matter where you are, science should be within reach.
-                    </p>
+                    <p class="footer-tagline">Empowering every student to explore, discover, and innovate through accessible science fair resources.</p>
                 </div>
-
-                <div class="footer-section">
-                    <h4>Resources</h4>
-                    <ul class="footer-links">
-                        <li><a href="setupguide.html">Setup Guide</a></li>
-                        <li><a href="stateresources.html">State Resources</a></li>
-                        <li><a href="researchguide.html">Research Guide</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Get Involved</h4>
-                    <ul class="footer-links">
-                        <li><a href="volunteer.html">Volunteer</a></li>
-                        <li><a href="volunteer.html">Partner With Us</a></li>
-                        <li><a href="donate.html">Donate</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Contact</h4>
-                    <ul class="footer-links">
-                        <li><a href="volunteer.html">Get in Touch</a></li>
-                    </ul>
+                <div class="footer-links-grid">
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="setupguide.html">Setup Guide</a></li>
+                            <li><a href="stateresources.html">State Resources</a></li>
+                            <li><a href="researchguide.html">Research Guide</a></li>
+                            <li><a href="starthere.html">Start Here</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Get Involved</h4>
+                        <ul>
+                            <li><a href="volunteer.html">Volunteer</a></li>
+                            <li><a href="donate.html">Donate</a></li>
+                            <li><a href="volunteer.html">Partner With Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="volunteer.html">Contact Us</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">LinkedIn</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-
             <div class="footer-bottom">
                 <p>&copy; 2024 FairGame Initiative. All rights reserved.</p>
                 <div class="footer-legal">

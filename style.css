@@ -313,7 +313,7 @@ img {
     font-size: clamp(3rem, 8vw, 6rem);
     margin-bottom: var(--spacing-md);
     font-weight: 700;
-    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 2px 20px rgba(199, 235, 203, 0.3);
 }
 
 .hero-subtitle-large {

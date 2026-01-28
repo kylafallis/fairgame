@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FairGame Initiative - Empowering Future Scientists</title>
+    <title>FairGame Initiative - Science Fairs Without Barriers</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,7 @@
         <div class="container">
             <div class="nav-content">
                 <a href="index.html" class="logo">
-                    <img src="logo.svg" alt="FairGame Initiative Logo" class="logo-img">
+                    <img src="Images/logo.svg" alt="FairGame Initiative Logo" class="logo-img">
                     <span class="logo-text">FairGame</span>
                 </a>
                 <button class="mobile-toggle" aria-label="Toggle menu">
@@ -33,65 +33,52 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    <span class="title-main">FairGame Initiative</span>
-                    <span class="title-sub">Empowering Future Scientists</span>
-                </h1>
-                <p class="hero-subtitle">Science Fairs Without Barriers</p>
-                <p class="hero-description">
-                    Every student deserves the opportunity to explore science. We provide free resources, 
-                    guidance, and connections to underserved communities, making scientific discovery accessible to all.
-                </p>
-                <div class="hero-ctas">
-                    <a href="#quiz" class="btn btn-primary">Get Started</a>
-                    <a href="#about" class="btn btn-secondary">Learn More</a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <img src="hero-illustration.svg" alt="Students conducting science experiments" class="hero-img">
-            </div>
+    <!-- Full-Screen Hero Section with Large Image -->
+    <section class="hero-fullscreen">
+        <div class="hero-image-container">
+            <img src="science-fair-hero.jpg" alt="Students at science fair" class="hero-image">
+            <div class="hero-overlay"></div>
         </div>
-        <div class="scroll-indicator">
-            <span>Scroll to explore</span>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 5V19M12 19L5 12M12 19L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+        <div class="hero-content-center">
+            <h1 class="hero-title-large">FairGame Initiative</h1>
+            <p class="hero-subtitle-large">Science Fairs Without Barriers</p>
+            <div class="hero-buttons">
+                <a href="#quiz" class="btn btn-primary btn-large">Get Started</a>
+                <a href="#about" class="btn btn-secondary btn-large">Learn More</a>
+            </div>
         </div>
     </section>
 
-    <!-- Impact Statistics -->
-    <section class="impact-stats">
+    <!-- Thin Quiz Banner -->
+    <section class="quiz-banner">
         <div class="container">
-            <div class="stats-grid">
-                <div class="stat-card" data-aos="fade-up">
-                    <div class="stat-icon">
-                        <img src="icon-schools.svg" alt="Schools icon">
-                    </div>
+            <div class="quiz-banner-content">
+                <div class="quiz-banner-text">
+                    <h3>Find Your Perfect Resources</h3>
+                    <p>Take our quick quiz to discover personalized guidance for students, educators, or parents</p>
+                </div>
+                <a href="#quiz-section" class="btn btn-primary">Take the Quiz</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Thin Impact Statistics Banner -->
+    <section class="impact-stats-thin">
+        <div class="container-wide">
+            <div class="stats-strip">
+                <div class="stat-item">
                     <div class="stat-number" data-target="250">0</div>
                     <div class="stat-label">Schools Supported</div>
                 </div>
-                <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="stat-icon">
-                        <img src="icon-students.svg" alt="Students icon">
-                    </div>
+                <div class="stat-item">
                     <div class="stat-number" data-target="15000">0</div>
                     <div class="stat-label">Students Reached</div>
                 </div>
-                <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="stat-icon">
-                        <img src="icon-projects.svg" alt="Projects icon">
-                    </div>
+                <div class="stat-item">
                     <div class="stat-number" data-target="3500">0</div>
                     <div class="stat-label">Projects Completed</div>
                 </div>
-                <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="stat-icon">
-                        <img src="icon-mentors.svg" alt="Mentors icon">
-                    </div>
+                <div class="stat-item">
                     <div class="stat-number" data-target="500">0</div>
                     <div class="stat-label">Active Mentors</div>
                 </div>
@@ -99,51 +86,58 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
+    <!-- Asymmetric About Section -->
+    <section id="about" class="about-section-asymmetric">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Breaking Down Barriers to Science Education</h2>
-                <p class="section-subtitle">
-                    We're on a mission to ensure every student, regardless of their background or location, 
-                    has access to quality science fair resources and opportunities.
-                </p>
-            </div>
-            
-            <div class="about-grid">
-                <div class="about-card shape-circle" data-aos="zoom-in">
-                    <div class="card-shape"></div>
-                    <div class="card-content">
-                        <img src="icon-accessibility.svg" alt="Accessibility icon" class="card-icon">
-                        <h3>Accessible to All</h3>
-                        <p>
-                            Free, comprehensive resources designed for students in underserved communities 
-                            who may lack access to traditional science fair support systems.
-                        </p>
-                    </div>
+            <div class="about-layout">
+                <div class="about-sidebar">
+                    <h2 class="about-title">Breaking Down Barriers to Science Education</h2>
+                    <p class="about-description">
+                        We're on a mission to ensure every student, regardless of their background or location, 
+                        has access to quality science fair resources and opportunities.
+                    </p>
                 </div>
-                
-                <div class="about-card shape-hexagon" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="card-shape"></div>
-                    <div class="card-content">
-                        <img src="icon-guidance.svg" alt="Guidance icon" class="card-icon">
-                        <h3>Expert Guidance</h3>
-                        <p>
-                            Connect with mentors, scientists, and educators who provide personalized 
-                            support throughout your science fair journey, from ideation to presentation.
-                        </p>
+                <div class="about-tabs">
+                    <div class="tab-item active" data-tab="access">
+                        <div class="tab-header">
+                            <div class="tab-number">01</div>
+                            <h3>Accessible to All</h3>
+                        </div>
+                        <div class="tab-content">
+                            <p>
+                                Free, comprehensive resources designed for students in underserved communities 
+                                who may lack access to traditional science fair support systems. We believe every 
+                                student deserves the chance to explore, discover, and innovate.
+                            </p>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="about-card shape-triangle" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="card-shape"></div>
-                    <div class="card-content">
-                        <img src="icon-community.svg" alt="Community icon" class="card-icon">
-                        <h3>Community Network</h3>
-                        <p>
-                            Join a nationwide network of students, teachers, and science enthusiasts 
-                            working together to make scientific discovery accessible and exciting.
-                        </p>
+                    
+                    <div class="tab-item" data-tab="guidance">
+                        <div class="tab-header">
+                            <div class="tab-number">02</div>
+                            <h3>Expert Guidance</h3>
+                        </div>
+                        <div class="tab-content">
+                            <p>
+                                Connect with mentors, scientists, and educators who provide personalized 
+                                support throughout your science fair journey. From ideation to presentation, 
+                                you'll have experienced professionals by your side.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-item" data-tab="community">
+                        <div class="tab-header">
+                            <div class="tab-number">03</div>
+                            <h3>Community Network</h3>
+                        </div>
+                        <div class="tab-content">
+                            <p>
+                                Join a nationwide network of students, teachers, and science enthusiasts 
+                                working together to make scientific discovery accessible and exciting. 
+                                Together, we're creating the next generation of innovators.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -151,49 +145,26 @@
     </section>
 
     <!-- Interactive Quiz Section -->
-    <section id="quiz" class="quiz-section">
+    <section id="quiz-section" class="quiz-section">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Everything You Need</h2>
-                <p class="section-subtitle">
-                    Tell us who you are, and we'll guide you to the perfect resources
-                </p>
-            </div>
-
-            <!-- Quiz Container -->
             <div class="quiz-container">
                 <!-- Question 1: User Type -->
                 <div class="quiz-step active" id="step-1">
                     <h3 class="quiz-question">Who are you?</h3>
                     <div class="quiz-options">
                         <button class="quiz-option" data-next="step-2-student" data-user-type="student">
-                            <div class="option-icon">
-                                <img src="icon-student.svg" alt="Student">
-                            </div>
                             <span class="option-text">I'm a Student</span>
-                            <svg class="option-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
+                            <span class="option-arrow">→</span>
                         </button>
                         
                         <button class="quiz-option" data-next="step-2-educator" data-user-type="educator">
-                            <div class="option-icon">
-                                <img src="icon-teacher.svg" alt="Teacher">
-                            </div>
                             <span class="option-text">I'm an Educator</span>
-                            <svg class="option-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
+                            <span class="option-arrow">→</span>
                         </button>
                         
                         <button class="quiz-option" data-next="step-2-parent" data-user-type="parent">
-                            <div class="option-icon">
-                                <img src="icon-parent.svg" alt="Parent">
-                            </div>
                             <span class="option-text">I'm a Parent</span>
-                            <svg class="option-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
+                            <span class="option-arrow">→</span>
                         </button>
                     </div>
                 </div>
@@ -204,43 +175,20 @@
                     <h3 class="quiz-question">What do you need help with?</h3>
                     <div class="quiz-options">
                         <button class="quiz-option" data-result="student-getting-started">
-                            <div class="option-icon">
-                                <img src="icon-start.svg" alt="Getting Started">
-                            </div>
                             <span class="option-text">Getting Started with My Project</span>
-                            <svg class="option-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
+                            <span class="option-arrow">→</span>
                         </button>
-                        
                         <button class="quiz-option" data-result="student-resources">
-                            <div class="option-icon">
-                                <img src="icon-resources.svg" alt="Resources">
-                            </div>
                             <span class="option-text">Finding Research Resources</span>
-                            <svg class="option-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
+                            <span class="option-arrow">→</span>
                         </button>
-                        
                         <button class="quiz-option" data-result="student-mentor">
-                            <div class="option-icon">
-                                <img src="icon-mentor.svg" alt="Mentor">
-                            </div>
                             <span class="option-text">Connecting with a Mentor</span>
-                            <svg class="option-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
+                            <span class="option-arrow">→</span>
                         </button>
-                        
                         <button class="quiz-option" data-result="student-competition">
-                            <div class="option-icon">
-                                <img src="icon-trophy.svg" alt="Competition">
-                            </div>
                             <span class="option-text">Competition Information</span>
-                            <svg class="option-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
+                            <span class="option-arrow">→</span>
                         </button>
                     </div>
                 </div>
@@ -251,43 +199,20 @@
                     <h3 class="quiz-question">What can we help you with?</h3>
                     <div class="quiz-options">
                         <button class="quiz-option" data-result="educator-setup">
-                            <div class="option-icon">
-                                <img src="icon-setup.svg" alt="Setup">
-                            </div>
                             <span class="option-text">Organizing a Science Fair</span>
-                            <svg class="option-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
+                            <span class="option-arrow">→</span>
                         </button>
-                        
                         <button class="quiz-option" data-result="educator-curriculum">
-                            <div class="option-icon">
-                                <img src="icon-curriculum.svg" alt="Curriculum">
-                            </div>
                             <span class="option-text">Curriculum & Teaching Resources</span>
-                            <svg class="option-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
+                            <span class="option-arrow">→</span>
                         </button>
-                        
                         <button class="quiz-option" data-result="educator-funding">
-                            <div class="option-icon">
-                                <img src="icon-funding.svg" alt="Funding">
-                            </div>
                             <span class="option-text">Finding Funding & Grants</span>
-                            <svg class="option-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
+                            <span class="option-arrow">→</span>
                         </button>
-                        
                         <button class="quiz-option" data-result="educator-support">
-                            <div class="option-icon">
-                                <img src="icon-support.svg" alt="Support">
-                            </div>
                             <span class="option-text">Expert Support & Training</span>
-                            <svg class="option-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
+                            <span class="option-arrow">→</span>
                         </button>
                     </div>
                 </div>
@@ -298,43 +223,20 @@
                     <h3 class="quiz-question">How can we support you?</h3>
                     <div class="quiz-options">
                         <button class="quiz-option" data-result="parent-guide">
-                            <div class="option-icon">
-                                <img src="icon-guide.svg" alt="Guide">
-                            </div>
                             <span class="option-text">Understanding Science Fairs</span>
-                            <svg class="option-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
+                            <span class="option-arrow">→</span>
                         </button>
-                        
                         <button class="quiz-option" data-result="parent-support">
-                            <div class="option-icon">
-                                <img src="icon-parent-support.svg" alt="Support">
-                            </div>
                             <span class="option-text">Supporting My Child's Project</span>
-                            <svg class="option-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
+                            <span class="option-arrow">→</span>
                         </button>
-                        
                         <button class="quiz-option" data-result="parent-local">
-                            <div class="option-icon">
-                                <img src="icon-local.svg" alt="Local Opportunities">
-                            </div>
                             <span class="option-text">Finding Local Opportunities</span>
-                            <svg class="option-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
+                            <span class="option-arrow">→</span>
                         </button>
-                        
                         <button class="quiz-option" data-result="parent-inspire">
-                            <div class="option-icon">
-                                <img src="icon-inspire.svg" alt="Inspire">
-                            </div>
                             <span class="option-text">Inspiring Interest in Science</span>
-                            <svg class="option-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
+                            <span class="option-arrow">→</span>
                         </button>
                     </div>
                 </div>
@@ -342,103 +244,41 @@
                 <!-- Results Display -->
                 <div class="quiz-results" id="quiz-results" style="display: none;">
                     <h3 class="results-title">Your Personalized Resources</h3>
-                    <div class="results-content" id="results-content">
-                        <!-- Dynamically populated -->
-                    </div>
+                    <div class="results-content" id="results-content"></div>
                     <button class="btn btn-primary quiz-restart">Start Over</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Resources Grid -->
-    <section id="resources" class="resources-section">
+    <!-- Compact Resources Grid -->
+    <section id="resources" class="resources-section-compact">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Comprehensive Resources for Every Step</h2>
-                <p class="section-subtitle">
-                    From your first idea to presenting at competitions, we've got you covered
-                </p>
-            </div>
-
-            <div class="resources-grid">
-                <a href="setupguide.html" class="resource-card" data-aos="fade-up">
-                    <div class="resource-icon">
-                        <img src="icon-setup-guide.svg" alt="Setup Guide">
-                    </div>
-                    <h3>Complete Setup Guides</h3>
-                    <p>
-                        Step-by-step instructions for organizing science fairs at any school, 
-                        from planning to execution.
-                    </p>
-                    <span class="resource-link">Explore Guide →</span>
+            <h2 class="section-title-center">Comprehensive Resources</h2>
+            <div class="resources-grid-compact">
+                <a href="setupguide.html" class="resource-card-compact">
+                    <h4>Setup Guides</h4>
+                    <p>Organize science fairs</p>
                 </a>
-
-                <a href="stateresources.html" class="resource-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="resource-icon">
-                        <img src="icon-map.svg" alt="State Resources">
-                    </div>
-                    <h3>State-by-State Resources</h3>
-                    <p>
-                        Comprehensive database of science fair opportunities, requirements, 
-                        and contacts for all 50 states.
-                    </p>
-                    <span class="resource-link">Find Your State →</span>
+                <a href="stateresources.html" class="resource-card-compact">
+                    <h4>State Resources</h4>
+                    <p>Find local opportunities</p>
                 </a>
-
-                <a href="researchguide.html" class="resource-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="resource-icon">
-                        <img src="icon-flask.svg" alt="Research Help">
-                    </div>
-                    <h3>Research Project Help</h3>
-                    <p>
-                        Learn how to develop winning research projects, from ideation to presentation.
-                    </p>
-                    <span class="resource-link">Start Researching →</span>
+                <a href="researchguide.html" class="resource-card-compact">
+                    <h4>Research Help</h4>
+                    <p>Develop your project</p>
                 </a>
-
-                <a href="onlinecommunities.html" class="resource-card" data-aos="fade-up">
-                    <div class="resource-icon">
-                        <img src="icon-network.svg" alt="Mentor Network">
-                    </div>
-                    <h3>Mentor Network</h3>
-                    <p>
-                        Connect with scientists, teachers, and past winners who can guide your journey.
-                    </p>
-                    <span class="resource-link">Find a Mentor →</span>
+                <a href="onlinecommunities.html" class="resource-card-compact">
+                    <h4>Mentor Network</h4>
+                    <p>Connect with experts</p>
                 </a>
-
-                <a href="pastwinners.html" class="resource-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="resource-icon">
-                        <img src="icon-pathway.svg" alt="Competition Pathways">
-                    </div>
-                    <h3>Competition Pathways</h3>
-                    <p>
-                        Navigate the path from local fairs to Regeneron ISEF and other prestigious competitions.
-                    </p>
-                    <span class="resource-link">View Pathways →</span>
+                <a href="pastwinners.html" class="resource-card-compact">
+                    <h4>Competition Paths</h4>
+                    <p>Navigate to ISEF</p>
                 </a>
-
-                <a href="teachers-professionals.html" class="resource-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="resource-icon">
-                        <img src="icon-teacher-resources.svg" alt="Teacher Resources">
-                    </div>
-                    <h3>Teacher Resources</h3>
-                    <p>
-                        Curriculum materials, judging guides, and training for educators supporting young scientists.
-                    </p>
-                    <span class="resource-link">Access Resources →</span>
-                </a>
-
-                <a href="researchscientists.html" class="resource-card" data-aos="fade-up">
-                    <div class="resource-icon">
-                        <img src="icon-scientists.svg" alt="Research Scientists">
-                    </div>
-                    <h3>Research Scientists Network</h3>
-                    <p>
-                        Connect with professional researchers who can provide expertise and mentorship.
-                    </p>
-                    <span class="resource-link">Connect Now →</span>
+                <a href="teachers-professionals.html" class="resource-card-compact">
+                    <h4>Teacher Resources</h4>
+                    <p>Curriculum materials</p>
                 </a>
             </div>
         </div>
@@ -450,11 +290,10 @@
             <div class="cta-content">
                 <h2 class="cta-title">Ready to Make a Difference?</h2>
                 <p class="cta-description">
-                    Whether you're a student starting your first project, an educator organizing a science fair, 
-                    or a supporter of STEM education, there's a place for you in the FairGame community.
+                    Join the FairGame community and help make science accessible to every student.
                 </p>
                 <div class="cta-buttons">
-                    <a href="#quiz" class="btn btn-primary btn-large">Get Started</a>
+                    <a href="#quiz-section" class="btn btn-primary btn-large">Get Started</a>
                     <a href="volunteer.html" class="btn btn-secondary btn-large">Contact Us</a>
                 </div>
             </div>
@@ -467,19 +306,13 @@
             <div class="footer-content">
                 <div class="footer-section footer-brand">
                     <div class="footer-logo">
-                        <img src="logo.svg" alt="FairGame Initiative">
+                        <img src="Images/logo.svg" alt="FairGame Initiative">
                         <span>FairGame</span>
                     </div>
                     <p class="footer-tagline">
                         Empowering every student to explore, discover, and innovate through accessible 
                         science fair resources. No matter where you are, science should be within reach.
                     </p>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><img src="icon-facebook.svg" alt="Facebook"></a>
-                        <a href="#" aria-label="Twitter"><img src="icon-twitter.svg" alt="Twitter"></a>
-                        <a href="#" aria-label="Instagram"><img src="icon-instagram.svg" alt="Instagram"></a>
-                        <a href="#" aria-label="LinkedIn"><img src="icon-linkedin.svg" alt="LinkedIn"></a>
-                    </div>
                 </div>
 
                 <div class="footer-section">
@@ -488,7 +321,6 @@
                         <li><a href="setupguide.html">Setup Guide</a></li>
                         <li><a href="stateresources.html">State Resources</a></li>
                         <li><a href="researchguide.html">Research Guide</a></li>
-                        <li><a href="https://www.societyforscience.org/" target="_blank" rel="noopener">Society for Science</a></li>
                     </ul>
                 </div>
 
@@ -505,7 +337,6 @@
                     <h4>Contact</h4>
                     <ul class="footer-links">
                         <li><a href="volunteer.html">Get in Touch</a></li>
-                        <li><a href="mailto:info@fairgameinitiative.org">info@fairgameinitiative.org</a></li>
                     </ul>
                 </div>
             </div>

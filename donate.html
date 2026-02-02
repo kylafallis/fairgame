@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Donate — FairGame</title>
+    <style>
+        :root{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;line-height:1.4;color:#111}
+        body{margin:0;background:#f5f7fb;padding:32px;display:flex;align-items:center;justify-content:center;min-height:100vh}
+        .card{background:#fff;border-radius:10px;box-shadow:0 6px 24px rgba(20,30,40,.08);max-width:720px;width:100%;padding:28px}
+        h1{margin:0 0 8px;font-size:20px}
+        p.lead{margin:0 0 18px;color:#555}
+        form{display:grid;gap:12px}
+        .row{display:flex;gap:12px}
+        .col{flex:1;min-width:0}
+        label{display:block;font-size:13px;margin-bottom:6px;color:#333}
+        input[type="text"],input[type="email"],input[type="tel"],input[type="number"],select{width:100%;padding:10px;border:1px solid #d7dbe0;border-radius:8px;font-size:14px}
+        .amounts{display:flex;gap:8px;flex-wrap:wrap}
+        .amounts button{padding:8px 12px;border-radius:8px;border:1px solid #d7dbe0;background:#fff;cursor:pointer}
+        .amounts button.active{background:#0b74ff;color:#fff;border-color:#0b74ff}
+        .small{font-size:13px;color:#666}
+        .actions{text-align:right;margin-top:6px}
+        button[type="submit"]{background:#0b74ff;color:#fff;border:0;padding:10px 16px;border-radius:8px;cursor:pointer}
+        .inline{display:flex;gap:8px;align-items:center}
+        .muted{color:#777;font-size:13px}
+        .success{background:#e6ffef;border:1px solid #b6f0c8;color:#084b2d;padding:10px;border-radius:8px}
+        .hidden{display:none}
+        <link rel="stylesheet" href="style.css">
+    </style>
+</head>
+<body>
+    <main class="card" role="main">
+        <h1>Support FairGame</h1>
+        <p class="lead">Your gift helps us run programs, support participants, and keep our community inclusive. All donations are tax-deductible.</p>
+
+        <form id="donationForm" action="#" method="POST" autocomplete="on" novalidate>
+            <input type="hidden" name="nonprofit_id" value="fairgame-001">
+
+            <fieldset aria-labelledby="donorInfo" style="border:0;padding:0;margin:0">
+                <legend id="donorInfo" class="small">Donor information</legend>
+
+                <div class="row">
+                    <div class="col">
+                        <label for="fullName">Full name</label>
+                        <input id="fullName" name="fullName" type="text" required placeholder="Jane Q. Donor" />
+                    </div>
+                    <div class="col">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" required placeholder="you@example.org" />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <label for="phone">Phone (optional)</label>
+                        <input id="phone" name="phone" type="tel" placeholder="(555) 555-5555" />
+                    </div>
+                    <div class="col">
+                        <label for="address">City / State (optional)</label>
+                        <input id="address" name="address" type="text" placeholder="Seattle, WA" />
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset aria-labelledby="donationAmount" style="border:0;padding:0;margin-top:6px">
+                <legend id="donationAmount" class="small">Donation amount</legend>
+
+                <div class="amounts" id="presetAmounts" role="radiogroup" aria-label="Preset donation amounts">
+                    <button type="button" data-amount="10">$10</button>
+                    <button type="button" data-amount="25">$25</button>
+                    <button type="button" data-amount="50">$50</button>
+                    <button type="button" data-amount="100">$100</button>
+                    <button type="button" data-amount="other">Other</button>
+                </div>
+
+                <div class="row" style="margin-top:8px">
+                    <div class="col">
+                        <label for="amount">Amount (USD)</label>
+                        <input id="amount" name="amount" type="number" min="1" step="0.01" required placeholder="25.00" />
+                    </div>
+                    <div style="width:190px">
+                        <label for="recurring">Make this a monthly gift</label>
+                        <div class="inline" style="margin-top:6px">
+                            <input id="recurring" name="recurring" type="checkbox" />
+                            <label for="recurring" class="muted">Monthly</label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset aria-labelledby="payment" style="border:0;padding:0;margin-top:6px">
+                <legend id="payment" class="small">Payment details</legend>
+
+                <!-- NOTE: Replace client-side payment capture with a secure processor (Stripe, PayPal, etc.) -->
+                <label for="cardName">Name on card</label>
+                <input id="cardName" name="cardName" type="text" required placeholder="Jane Q. Donor" />
+
+                <div class="row">
+                    <div class="col">
+                        <label for="cardNumber">Card number</label>
+                        <input id="cardNumber" name="cardNumber" type="text" inputmode="numeric" pattern="[0-9\s]{13,19}" required placeholder="4111 1111 1111 1111" />
+                    </div>
+                    <div style="width:120px">
+                        <label for="exp">Expiry (MM/YY)</label>
+                        <input id="exp" name="exp" type="text" inputmode="numeric" pattern="(0[1-9]|1[0-2])\/\d{2}" required placeholder="08/26" />
+                    </div>
+                    <div style="width:100px">
+                        <label for="cvc">CVC</label>
+                        <input id="cvc" name="cvc" type="text" inputmode="numeric" pattern="\d{3,4}" required placeholder="123" />
+                    </div>
+                </div>
+
+                <div class="note">We do not store payment details on this server. Use a secure payment processor in production.</div>
+            </fieldset>
+
+            <div class="actions">
+                <button type="submit">Donate</button>
+            </div>
+
+            <div id="message" class="hidden" role="status" aria-live="polite" style="margin-top:12px"></div>
+        </form>
+    </main>
+
+    <script>
+        (function(){
+            const presets = document.getElementById('presetAmounts');
+            const amountInput = document.getElementById('amount');
+            const form = document.getElementById('donationForm');
+            const msg = document.getElementById('message');
+
+            presets.addEventListener('click', e => {
+                const btn = e.target.closest('button[data-amount]');
+                if(!btn) return;
+                [...presets.querySelectorAll('button')].forEach(b=>b.classList.remove('active'));
+                btn.classList.add('active');
+                if(btn.dataset.amount === 'other') {
+                    amountInput.focus();
+                    amountInput.value = '';
+                } else {
+                    amountInput.value = parseFloat(btn.dataset.amount).toFixed(2);
+                }
+            });
+
+            function luhnCheck(number){
+                const digits = number.replace(/\D/g,'').split('').reverse().map(Number);
+                let sum=0;
+                for(let i=0;i<digits.length;i++){
+                    let d=digits[i];
+                    if(i%2===1){ d*=2; if(d>9)d-=9; }
+                    sum+=d;
+                }
+                return (sum%10)===0;
+            }
+
+            form.addEventListener('submit', e => {
+                e.preventDefault();
+                msg.className = 'hidden';
+                // basic validation
+                if(!form.checkValidity()){
+                    form.reportValidity();
+                    return;
+                }
+                const card = document.getElementById('cardNumber').value;
+                if(!luhnCheck(card)){
+                    msg.textContent = 'Card number appears invalid.';
+                    msg.className = 'success';
+                    msg.style.background = '#fff2f0';
+                    msg.style.borderColor = '#ffb4a2';
+                    msg.style.color = '#6b1c07';
+                    return;
+                }
+
+                // NOTE: Replace with a real payment workflow.
+                // Simulate success:
+                msg.textContent = 'Thank you — your donation has been received (simulation).';
+                msg.className = 'success';
+                form.reset();
+                [...presets.querySelectorAll('button')].forEach(b=>b.classList.remove('active'));
+            });
+        })();
+    </script>
+</body>
+</html>

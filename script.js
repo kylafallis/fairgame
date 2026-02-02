@@ -567,3 +567,193 @@ if ('IntersectionObserver' in window) {
 console.log('%cFairGame Initiative', 'color: #FF6B9D; font-size: 24px; font-weight: bold;');
 console.log('%cEmpowering Future Scientists', 'color: #4ECDC4; font-size: 16px;');
 console.log('Interested in contributing? Visit volunteer.html');
+// ==========================================================================
+// Setup Guide Page - Additional JavaScript
+// Add this to the bottom of your existing script.js file
+// ==========================================================================
+
+// Initialize setup guide interactive elements
+document.addEventListener('DOMContentLoaded', function() {
+    initSetupGuideFeatures();
+});
+
+function initSetupGuideFeatures() {
+    // Check if we're on the setup guide page
+    if (!document.querySelector('.guide-wrapper')) return;
+    
+    initExpandableSections();
+    initTimelinePhases();
+    initFAQAccordion();
+    initTOCScrollSpy();
+}
+
+// Expandable Sections
+function initExpandableSections() {
+    const expandableSections = document.querySelectorAll('.expandable-section');
+    
+    expandableSections.forEach(section => {
+        const header = section.querySelector('.expandable-header');
+        
+        header.addEventListener('click', function() {
+            section.classList.toggle('active');
+        });
+    });
+}
+
+// Timeline Phases
+function initTimelinePhases() {
+    const timelinePhases = document.querySelectorAll('.timeline-phase');
+    
+    timelinePhases.forEach(phase => {
+        const header = phase.querySelector('.timeline-phase-header');
+        
+        header.addEventListener('click', function() {
+            phase.classList.toggle('active');
+        });
+    });
+}
+
+// FAQ Accordion
+function initFAQAccordion() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        
+        question.addEventListener('click', function() {
+            // Close all other FAQs
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                }
+            });
+            
+            // Toggle current FAQ
+            item.classList.toggle('active');
+        });
+    });
+}
+
+// Table of Contents Scroll Spy
+function initTOCScrollSpy() {
+    const tocLinks = document.querySelectorAll('.toc-link');
+    const sections = document.querySelectorAll('.guide-section');
+    
+    // Highlight TOC link based on scroll position
+    window.addEventListener('scroll', function() {
+        let current = '';
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (window.pageYOffset >= (sectionTop - 200)) {
+                current = section.getAttribute('id');
+            }
+        });
+        
+        tocLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + current) {
+                link.classList.add('active');
+            }
+        });
+    });
+    
+    // Smooth scroll when clicking TOC links
+    tocLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            
+            if (targetSection) {
+                const navHeight = document.querySelector('.navbar').offsetHeight;
+                const targetPosition = targetSection.offsetTop - navHeight - 20;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+}
+// Slide-in Animation Observer
+const observerOptions = {
+    threshold: 0.2
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+        }
+    });
+}, observerOptions);
+
+document.querySelectorAll('.guide-section').forEach(section => {
+    observer.observe(section);
+});
+
+// Force Back Button to Home
+window.addEventListener('popstate', function(event) {
+    window.location.href = 'index.html';
+}, false);
+
+// History push to enable popstate
+history.pushState(null, null, window.location.pathname);
+
+// TOC Toggle
+function toggleTOC() {
+    document.querySelector('.toc-sidebar').classList.toggle('active');
+}
+// 1. MENU TOGGLE
+function toggleMenu() {
+    document.getElementById('sideMenu').classList.toggle('active');
+}
+
+// 2. SLIDE-IN ANIMATION (Intersection Observer)
+const panelObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+        }
+    });
+}, { threshold: 0.2 });
+
+document.querySelectorAll('.scroll-panel').forEach(panel => {
+    panelObserver.observe(panel);
+});
+
+// 3. BROWSER BACK BUTTON REDIRECT
+window.addEventListener('popstate', function(event) {
+    window.location.href = "index.html";
+}, false);
+
+// 4. HERO DOTS HOVER
+const pathDots = document.querySelectorAll('.path-dot');
+const pathLabel = document.getElementById('path-label');
+
+pathDots.forEach(dot => {
+    dot.addEventListener('mouseenter', () => {
+        pathLabel.innerText = dot.getAttribute('data-label');
+        pathLabel.style.color = "#ff3e00";
+    });
+    dot.addEventListener('mouseleave', () => {
+        pathLabel.innerText = "The Pathway to Success";
+        pathLabel.style.color = "white";
+    });
+});
+
+// 5. TIMELINE HOVER DETAILS
+const timeNodes = document.querySelectorAll('.time-node');
+timeNodes.forEach(node => {
+    node.addEventListener('mouseenter', () => {
+        const info = node.getAttribute('data-info');
+        // Optional: Create a floating tooltip or update a text box
+        console.log(info); 
+    });
+});
+
+// 6. FORCE REDIRECT ON BACK (Ensures Chrome follows the requirement)
+history.pushState(null, null, location.href);
